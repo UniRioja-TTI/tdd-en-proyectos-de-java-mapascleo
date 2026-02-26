@@ -9,38 +9,41 @@ public class ToDo {
     private boolean completada;
 
     public ToDo(String nombre, String descripcion, LocalDate fechaLimite) {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.fechaLimite = fechaLimite;
+        this.completada = false;
     }
 
     public String getNombre() {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        this.nombre = nombre;
     }
 
     public String getDescripcion() {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        return descripcion;
     }
 
     public void setDescripcion(String descripcion) {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        this.descripcion = descripcion;
     }
 
     public LocalDate getFechaLimite() {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        return fechaLimite;
     }
 
     public void setFechaLimite(LocalDate fechaLimite) {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        this.fechaLimite = fechaLimite;
     }
 
     public boolean isCompletada() {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        return completada;
     }
 
     public void setCompletada(boolean completada) {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        this.completada = completada;
     }
 }

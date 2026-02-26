@@ -8,32 +8,32 @@ import java.util.Map;
 public class DBStub {
     private Map<Integer, ToDo> tareas = new HashMap<>();
     private List<String> agendaEmails = new ArrayList<>();
+    private int currentId = 1;
 
-    public void create(ToDo tarea) {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+    public int create(ToDo tarea) {
+        tareas.put(currentId, tarea);
+        return currentId++;
     }
 
     public ToDo read(int id) {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        return tareas.get(id);
     }
 
     public List<ToDo> readAll() {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        return new ArrayList<>(tareas.values());
     }
 
     public void update(int id, ToDo tarea) {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
-    }
-
-    public void delete(int id) {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        tareas.put(id, tarea);
     }
 
     public void agregarEmail(String email) {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        if (!agendaEmails.contains(email)) {
+            agendaEmails.add(email);
+        }
     }
 
     public List<String> getAgenda() {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+        return new ArrayList<>(agendaEmails);
     }
 }
