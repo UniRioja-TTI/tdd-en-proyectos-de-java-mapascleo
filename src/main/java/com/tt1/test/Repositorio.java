@@ -2,9 +2,17 @@ package com.tt1.test;
 
 import java.util.List;
 
+/**
+ * Implementación concreta de IRepositorio.
+ * Actúa como intermediario entre la lógica de la aplicación y la base de datos simulada (DBStub).
+ */
 public class Repositorio implements IRepositorio {
     private final DBStub db;
 
+    /**
+     * Constructor del repositorio.
+     * @param db La instancia de la base de datos a utilizar.
+     */
     public Repositorio(DBStub db) {
         this.db = db;
     }
